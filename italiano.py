@@ -5,6 +5,7 @@ texto = "Ciao! Nel 2025, 22 fotografi catturano momenti. Lista: macchina, obiett
 # palabras (cuenta también con tildes y ñ)
 patronp = r"[A-Za-zÁÉÍÓÚáàéèíìóòúùÜüÑñ]+"
 palabras = re.findall(patronp, texto)
+
 # enteros que no se confundan con decimales
 patrone = r"(?<!\d)\d+(?!\,\d)"
 enteros = re.findall(patrone, texto)
@@ -13,10 +14,10 @@ enteros = re.findall(patrone, texto)
 patronf = r"\d+\,\d+"
 decimales = re.findall(patronf, texto)
 
-# listas (captura después de 'lista:')
+# listas
 patronl = r"[Ll]ista:\s*([^\.!?\n]+)"
 listas = re.findall(patronl, texto)
-#r"(?i)\blista:\s*([^\.\n]+)"
+
 
 print("Palabras:", len(palabras), palabras)
 print("Enteros:", len(enteros), enteros)

@@ -5,6 +5,7 @@ texto = "En el año 2025, 23 fotógrafos capturan momentos. ¡Hola! ¿Te gusta l
 # palabras (cuenta también con tildes y ñ)
 patronp = r"[A-Za-zÁÉÍÓÚáéíóúÜüÑñ]+"
 palabras = re.findall(patronp, texto)
+
 # enteros que no se confundan con decimales
 patrone = r"(?<!\d)\d+(?!\.\d)"
 enteros = re.findall(patrone, texto)
